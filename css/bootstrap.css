@@ -347,8 +347,8 @@ th.visible-print, td.visible-print {
 	width: 100%;
 }
 .cp-megamenu .cp-mega-menu > label {
-	display: block; 
-	background-color: #65C888;/*Footifulcommented32aae1*/
+	display: block;
+	background-color:#7E072E;/*Footifulcommented32aae1*/
 	color: #fff;
 	cursor: pointer;
 	display: block;
@@ -543,7 +543,7 @@ body {
 }
 .cp-megamenu .cp-mega-menu > label {
 	display: block; 
-	background-color: #65C888;/*Footifulcommented32aae1*/
+	background-color:#7E072E;/*Footifulcommented32aae1*/
 	color: #fff;
 	cursor: pointer;
 	display: block;
