@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
 <meta http-equiv="Cache-control" content="public">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -223,7 +224,43 @@ p.seconward{
     text-indent: 30px;
 }
 </style>
- 
+  <script type="text/javascript">
+      google.charts.load('current', { 'packages': ['bar'] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Performance Statistics in Calendar Year 2016', 'Cristiano', 'Messi'],
+            ['GOALS', 55, 58],
+            ['ASSISTS', 17, 32],
+            ['APPEARANCES', 57, 61]
+          ]);
+
+          var options = {
+              chart: {
+                  title: 'Performance Statistics of Cristiano & Messi in Calendar Year 2016'
+              },
+              bars: 'vertical',
+              vAxis: { format: 'decimal' },
+              height: 400,
+              colors: ['#61A8AA', '#75AADB']
+          };
+
+          var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+
+          var btns = document.getElementById('btn-group');
+
+          btns.onclick = function (e) {
+
+              if (e.target.tagName === 'BUTTON') {
+                  options.vAxis.format = e.target.id === 'none' ? '' : e.target.id;
+                  chart.draw(data, google.charts.Bar.convertOptions(options));
+              }
+          }
+      }
+ </script>
 </head>
 <body>
  
@@ -321,10 +358,14 @@ p.seconward{
                     Riyad Mahrez for helping Leicester City to win their maiden Premier League Title; Antonio Griezman for his heroics with France and 
                     Athletico Madrid are two potential candidates to usurp the two.  But it is most likely that either Messi or Cristiano will win the Ballon d’Or 
                     and the inaugural ‘Fifa The Best’ award. Let’s look at how these two have performed in the year 2016. Below are their statistics.</p>
-
-                   
-
-                        <table class="features-table">
+                     <br/><br/>
+                   <table style="width:100%" width="100%">
+                       <tr><td style="width:90%">
+                           <div id="chart_div"></div>
+                           </td></tr>
+                   </table>
+                    
+                        <!--<table class="features-table">
                             <thead>
                                 <tr>
                                     <td style="word-wrap:break-word"></td>
@@ -356,10 +397,10 @@ p.seconward{
                                     <td>32</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table>-->
 
- <br/><br/>
-                        <table class="features-table">
+
+<!--                        <table class="features-table">
                             <thead>
                                 <tr>
                                     <td></td>
@@ -386,7 +427,7 @@ p.seconward{
                                     <td>Copa America runner-up</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table>-->
  
 
 <!--                    *********************************************** Share **********************************************************-->
