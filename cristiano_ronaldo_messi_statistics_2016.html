@@ -245,7 +245,7 @@ p.seconward{
              bars: 'vertical',
              vAxis: { format: 'decimal' },
              height: 400,
-             colors: ['#61A8AA', '#75AADB']
+             colors: ['#DC3912', '#75AADB']
          };
 
          var chart = new google.charts.Bar(document.getElementById('chart_div'));
@@ -364,9 +364,18 @@ p.seconward{
                         Cristiano contributed for <b>72</b> of his team's goals this year, with <b>55 goals</b> and <b>17 assists</b>.
                     </p>
                     <div class="main">
-                     <br/>
                    <table style="width:100%" width="100%">
-                       <tr><td style="width:90%">
+                       <tr>
+                           <td style="width:45%">
+                               <iframe src="goals_chart.html" border="0" width="90%" height="200px" style="border:none;" scrolling="no"></iframe>
+                           </td><td style="width:45%"><iframe src="assists_chart.html" border="0" width="90%" height="200px" style="border:none;" scrolling="no"></iframe></td> 
+                        </tr>
+                   </table>
+                    </div>
+                    <div class="main">                     
+                   <table style="width:100%" width="100%">
+                       <tr> 
+                           <td style="width:90%">
                            <div id="chart_div"></div>
                            </td></tr>
                    </table>
